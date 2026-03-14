@@ -1,4 +1,26 @@
-# Logs
+# ======================================
+# FRONTEND .gitignore (React + TypeScript + Vite)
+# DevSecOps Standard
+# ======================================
+
+# ======================================
+# SECRETS (Never commit)
+# ======================================
+.env
+.env.local
+.env.*.local
+.env.prod
+.env.staging
+.env.test
+credentials.json
+*credentials*.json
+*.pem
+*.key
+secrets.json
+
+# ======================================
+# LOGS
+# ======================================
 logs
 *.log
 npm-debug.log*
@@ -7,18 +29,81 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# ======================================
+# DEPENDENCIES & NODE MODULES
+# ======================================
 node_modules
-dist
-dist-ssr
-*.local
+node_modules/
+bower_components/
+.npm
+.eslintcache
+.stylelintcache
 
-# Editor directories and files
+# ======================================
+# BUILD & DISTRIBUTION
+# ======================================
+dist/
+dist-ssr/
+build/
+out/
+.vite/
+.next/
+.nuxt/
+
+# ======================================
+# LOCK FILES (Optional - see npm-best-practices)
+# ======================================
+# Uncomment if using monorepo or shared dependencies
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# ======================================
+# IDE & EDITOR
+# ======================================
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+!.vscode/settings.json
+.idea/
+*.iml
+*.ipr
+*.iws
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.swp
+*.swo
+*~
+
+# ======================================
+# OS & SYSTEM FILES
+# ======================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.stackdump
+Icon?
+.AppleDouble
+.LSOverride
+
+# ======================================
+# LOCAL / DEVELOPMENT
+# ======================================
+*.local
+.tmp/
+.cache/
+.history/
+.vscode-test/
+.turbo/
+
+# ======================================
+# MISC
+# ======================================
+*.bak
+*.orig
+*.rej
+.~*

@@ -1,0 +1,233 @@
+# ======================================
+# ROOT .gitignore (Smart Ticket Processor)
+# DevSecOps Standard - Security First
+# ======================================
+
+# ======================================
+# 1) SECRETS & CREDENTIALS (Critical)
+# ======================================
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.prod
+.env.staging
+
+# Credentials & Keys
+.aws/
+credentials.json
+*credentials*.json
+*.pem
+*.key
+*.p12
+*.cer
+*.jks
+*.pfx
+*.p8
+secrets.json
+*secret*.yml
+*secret*.yaml
+*.vault
+.ssh/
+id_rsa*
+id_ed25519*
+
+# Terraform / IaC
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# ======================================
+# 2) LOGS & DATABASE (Local/Test Data)
+# ======================================
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Local databases
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.backup
+*.dump
+*.sql.bak
+data/
+*.dump
+
+# ======================================
+# 3) OS ARTIFACTS (Rác hệ thống)
+# ======================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.stackdump
+Icon?
+*.tmp
+.directory
+.Trash*
+.AppleDouble
+.LSOverride
+
+# ======================================
+# 4) IDE & EDITOR CONFIGS (Cá nhân)
+# ======================================
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.iml
+*.ipr
+*.iws
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.DS_Store.AppleDouble
+.LSOverride
+*.orig
+*.rej
+.bak
+.backup
+
+# ======================================
+# 5) DEPENDENCY FOLDERS
+# ======================================
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.python-version
+venv/
+env/
+ENV/
+.venv/
+.virtualenv/
+*.egg-info/
+*.egg
+dist/
+build/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+pip-log.txt
+pip-delete-this-directory.txt
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+bower_components/
+.npm
+.eslintcache
+.stylelintcache
+.package-lock.json
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ======================================
+# 6) BUILD & ARTIFACT OUTPUTS
+# ======================================
+# Frontend
+dist/
+dist-ssr/
+build/
+.vite/
+.nuxt/
+.next/
+.out/
+.cache/
+.turbo/
+.env.*.local
+
+# Backend
+*.egg-info
+dist/
+build/
+*.war
+*.jar
+
+# Docker local (ignore local override files)
+docker-compose.override.yml
+docker-compose.local.yml
+.dockerignore.local
+.docker/
+docker-compose.*.override.yml
+
+# ======================================
+# 7) IDE-GENERATED & CACHE
+# ======================================
+.browse.VC.db
+Browse.VC.db
+*.VC.db
+.vscode/
+.idea/
+.history/
+.ionide/
+.vs/
+.vscode-test/
+out/
+*.lnk
+*.pdb
+
+# ======================================
+# 8) MISC (Backup, Temp Files)
+# ======================================
+*.bak
+*.old
+*.orig
+*.swp
+*.swo
+*~
+.~*
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+*.tmp
+*.temp
+*.cache
+
+# ======================================
+# 9) EXPORTS & LOCAL DATA
+# ======================================
+exports/
+downloads/
+uploads/
+temp/
+tmp/
+.tmp/
+*.xlsx
+*.xls
+generated/
+local_data/
