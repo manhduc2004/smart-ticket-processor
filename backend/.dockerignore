@@ -1,0 +1,17 @@
+# Bỏ qua git
+.git
+.gitignore
+
+# Bỏ qua môi trường ảo và cache
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Bỏ qua file biến môi trường (BẢO MẬT: Không bao giờ bake .env vào image)
+.env
+.env.local
+
+# Bỏ qua file Docker
+Dockerfile
+.dockerignore
