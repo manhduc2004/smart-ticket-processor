@@ -7,24 +7,33 @@ import { Plane, LogOut, MessageSquare, User as UserIcon } from 'lucide-react';
 import { TicketParserChat } from './features/tickets/TicketParseChat'; 
 
 function App() {
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+  // PREVIEW MODE: Using mock user to bypass login
+  const mockUser: User = {
+    id: 1,
+    username: 'Demo User',
+    email: 'demo@example.com',
+    is_active: true
+  };
   
-  // 👇 SỬA Ở ĐÂY: Đổi 'profile' thành 'chat'
+  const [user, setUser] = useState<User | null>(mockUser);
+  const [loading, setLoading] = useState(false);
+  
+  // Default to chat tab for preview
   const [activeTab, setActiveTab] = useState<'profile' | 'chat'>('chat'); 
 
   useEffect(() => {
-    (async () => {
-      try {
-        await silentRefresh();
-        const userData = await getMe();
-        setUser(userData);
-      } catch {
-        setUser(null);
-      } finally {
-        setLoading(false);
-      }
-    })();
+    // Commented out for preview mode
+    // (async () => {
+    //   try {
+    //     await silentRefresh();
+    //     const userData = await getMe();
+    //     setUser(userData);
+    //   } catch {
+    //     setUser(null);
+    //   } finally {
+    //     setLoading(false);
+    //   }
+    // })();
   }, []);
 
   const handleLogin = async () => {
